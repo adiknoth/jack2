@@ -56,9 +56,7 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
             restores the packing to its previous setting */
 
             #define JACK_ALIGN(N) __declspec(align(N))
-
-            /* A utility for declaring a type which is aligned to its size. */
-            #define JACK_ALIGNED_TYPE(T) JACK_ALIGN(sizeof(T)) T
+            #define JACK_ALIGNED_TYPE(T) T
 
         #else
             #define PRE_PACKED_STRUCTURE
