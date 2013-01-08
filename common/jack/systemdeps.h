@@ -32,7 +32,7 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
         */
 
         #define PRE_PACKED_STRUCTURE
-        #define POST_PACKED_STRUCTURE __attribute__((__packed__))
+        #define POST_PACKED_STRUCTURE
 
         #define JACK_ALIGN(N) __attribute__((__aligned__(N)))
 
@@ -42,7 +42,7 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
     #else
     
         #ifdef _MSC_VER
-            #define PRE_PACKED_STRUCTURE1 __pragma(pack(push,1))
+            #define PRE_PACKED_STRUCTURE1 __pragma(pack(push,8))
             #define PRE_PACKED_STRUCTURE    PRE_PACKED_STRUCTURE1
             /* PRE_PACKED_STRUCTURE needs to be a macro which
             expands into a compiler directive. The directive must
